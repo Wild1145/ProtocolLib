@@ -10,6 +10,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+
+
   <modules>
     <module>modules/API</module>
     <module>modules/ProtocolLib</module>
@@ -31,17 +33,26 @@
     </snapshotRepository>
   </distributionManagement>
 
-  <repositories>
-    <repository>
-      <id>dmulloy2-repo</id>
-      <url>http://repo.dmulloy2.net/content/groups/public/</url>
-    </repository>
-    <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
 
+<repositories>
+    <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>        
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>elmakers-repo</id>
+            <url>http://maven.elmakers.com/repository/</url>
+        </repository>
+        <repository>
+            <id>sk89q-snapshots</id>
+            <url>http://maven.sk89q.com/artifactory/repo</url>
+        </repository>
+    </repositories>
+    
   <build>
     <defaultGoal>clean package install</defaultGoal>
     <finalName>${project.name}</finalName>
